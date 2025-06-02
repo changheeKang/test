@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Classification</title>
+    <title>Image Classification and Object Detection</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Image Classification</h1>
-    <input type="file" id="imageUpload" accept="image/*">
+    <h1 class="fade-in-on-load">Image Classification and Object Detection</h1>
+    <input type="file" id="imageUpload" accept="image/*" class="fade-in-on-load">
+
+    <!-- Canvas for displaying image and detection results -->
+    <canvas id="objectDetectionCanvas" style="margin-top: 10px;"></canvas>
+
+    <!-- Image preview (can be hidden with CSS if canvas is primary display) -->
     <img id="imagePreview" src="#" alt="Image Preview" style="max-width: 300px; margin-top: 10px; display: none;">
+
     <div id="results"></div>
+
+    <div id="loader" class="loader" style="display: none;"></div>
+
+    <!-- TensorFlow.js and Models -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest/dist/mobilenet.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@latest/dist/coco-ssd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
