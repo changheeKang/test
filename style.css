@@ -40,3 +40,12 @@ input[type="file"] {
 #results div {
     margin-bottom: 5px;
 }
+
+#objectDetectionCanvas {
+    border: 1px solid #000; /* Black border for visibility */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    /* max-width and max-height can be set if needed, but JS controls width/height */
+    /* display: block; /* Ensure it takes up its own line, already done by canvas default in flex */
+}
