@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Image Classification and Object Detection</h1>
-    <input type="file" id="imageUpload" accept="image/*">
+    <h1 class="fade-in-on-load">Image Classification and Object Detection</h1>
+    <input type="file" id="imageUpload" accept="image/*" class="fade-in-on-load">
 
     <!-- Canvas for displaying image and detection results -->
     <canvas id="objectDetectionCanvas" style="margin-top: 10px;"></canvas>
@@ -17,6 +17,8 @@
     <img id="imagePreview" src="#" alt="Image Preview" style="max-width: 300px; margin-top: 10px; display: none;">
 
     <div id="results"></div>
+
+    <div id="loader" class="loader" style="display: none;"></div>
 
     <!-- TensorFlow.js and Models -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
